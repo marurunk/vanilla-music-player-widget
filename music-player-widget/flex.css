@@ -1,0 +1,14 @@
+.flex {
+	display: flex;
+}
+.col {
+	flex-direction: column;
+}
+
+.row {
+	flex-direction: row;
+}
+
+.over-hidden {
+	overflow: hidden;
+}
