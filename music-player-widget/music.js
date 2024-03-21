@@ -1,6 +1,6 @@
 const musicContainer = document.getElementById("music-container");
 
-var songs = [
+var playlist_default= [
 
 {name:"Something Conforting",album: "Nurture",artist: "Porter Robinson",
 	url:"208gzn.mp3",cover:"y1l1b3.jpeg"},
@@ -8,6 +8,8 @@ var songs = [
 	url:"yelhxi.mp3",cover:"y1l1b3.jpeg"},
 
 ];
+
+var songs = playlist_default
 let songIndex = 0;
 
 musicContainer.classList.add("music-container");musicContainer.classList.add("flex");musicContainer.classList.add("col");
@@ -59,7 +61,6 @@ const cover = document.getElementById("music-player-song-cover");
 
 audio.volume = 0.2;
 
-//function loadSong(song, cover) {
 function loadSong(song) {
   title.innerText = song.name;
   album.innerText = song.album;
@@ -118,6 +119,12 @@ progressContainer.addEventListener("click", setProgress);
 
 audio.addEventListener("ended", nextSong);
 
+function setPlaylist(playlist){
+	songIndex = 0;
+	songs = playlist
+  	const isPlaying = musicContainer.classList.contains("play");
+  	isPlaying ? return : playSong();
+}
+
+// DELETE THIS TO NO LOAD SONG ON START
 loadSong(songs[songIndex]);
-
-
