@@ -29,3 +29,5 @@ modify the dictionary songs on /data/music.js
 <script src="music-player-widget/music.js"></script>
 	<!-- ----------------- -->
 ```
+To do 
+[ ] hola
